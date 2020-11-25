@@ -1,14 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Button } from "./elements"
+import steps from "../constants/steps"
 
-export default function Step({ currStep }) {
+export default function Step({ step, handleNextStepSelection }) {
+  const { question, choices } = step
   return (
     <>
-      <p>{currStep}</p>
+      <p>{question}</p>
+      {step.choices.map((choice) => {
+        const correspondingStep = steps[choice]
+        return (
+          <Button onClick={() => handleNextStepSelection(choice)}>
+            {correspondingStep.buttonContent}
+          </Button>
+        )
+      })}
     </>
   )
 }
 
 Step.propTypes = {
-  currStep: PropTypes.string.isRequired,
+  step: PropTypes.string.isRequired,
+  handleNextStepSelection: PropTypes.func.isRequired,
 }

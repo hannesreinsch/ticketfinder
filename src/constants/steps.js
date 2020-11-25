@@ -9,7 +9,7 @@ const steps = {
     choices: ["step3", "step4"],
   },
   step3: {
-    question: "Question 1",
+    question: "Question 3",
     buttonContent: "Button to Step 3",
     choices: ["step4", "step5"],
   },
@@ -17,6 +17,11 @@ const steps = {
     question: "Question 4",
     buttonContent: "Button to Step 4",
     choices: ["step6", "step5"],
+  },
+  step5: {
+    question: "Question 5",
+    buttonContent: "Button to Step 5",
+    choices: ["step1", "step1"],
   },
 }
 
