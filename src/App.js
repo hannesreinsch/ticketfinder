@@ -3,17 +3,17 @@ import { ThemeProvider } from "styled-components"
 import GlobalStyles from "./styles/globalStyles"
 import Toggle from "./components/Toggle"
 import { ninebarcTheme, darkTheme } from "./styles/theme"
-import useDarkMode from "./hooks/useDarkMode"
+import useThemeChange from "./hooks/useThemeChange"
 import Container from "./components/Container"
 
 function App() {
-  const [theme, themeToggler] = useDarkMode()
-  const themeMode = theme === "light" ? ninebarcTheme : darkTheme
+  const [theme, themeToggler] = useThemeChange()
+  const themeMode = theme === "ninebarcTheme" ? ninebarcTheme : darkTheme
 
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
-      <Toggle theme={theme} toggleTheme={themeToggler} />
+      <Toggle toggleTheme={themeToggler} />
       <Container />
     </ThemeProvider>
   )

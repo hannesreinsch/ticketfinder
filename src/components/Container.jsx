@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Step from "./Step"
-import { Button } from "./elements"
+import PreviousChoices from "./PreviousChoices"
 import { db, Q_NOTICKET } from "../constants/db"
 
 export default function Container() {
@@ -25,24 +25,10 @@ export default function Container() {
 
   return (
     <>
-      {previousChoices.length > 0 && (
-        <>
-          <p>Your previous choices</p>
-          {previousChoices.map((prevChoice) => {
-            return (
-              <ol>
-                <li>
-                  <Button
-                    onClick={() => handleNextStepSelection(prevChoice.stepKey)}
-                  >
-                    {prevChoice.question} : {prevChoice.choice}
-                  </Button>
-                </li>
-              </ol>
-            )
-          })}
-        </>
-      )}
+      <PreviousChoices
+        previousChoices={previousChoices}
+        handleNextStepSelection={handleNextStepSelection}
+      />
       <Step
         step={db[currStep]}
         handleNextStepSelection={handleNextStepSelection}
