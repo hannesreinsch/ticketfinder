@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Button } from "./elements"
 import { db } from "../constants/db"
 
-export default function Step({ step, handleNextStepSelection }) {
+export default function Step({ step, handleNextStepSelection, theme }) {
   return (
     <>
       <p>{step.text}</p>
@@ -11,7 +11,10 @@ export default function Step({ step, handleNextStepSelection }) {
         step.choices.map((choice) => {
           const correspondingStep = db[choice]
           return (
-            <Button onClick={() => handleNextStepSelection(choice)}>
+            <Button
+              onClick={() => handleNextStepSelection(choice)}
+              theme={theme}
+            >
               {correspondingStep.buttonTextToStep}
             </Button>
           )
@@ -22,5 +25,6 @@ export default function Step({ step, handleNextStepSelection }) {
 
 Step.propTypes = {
   step: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
   handleNextStepSelection: PropTypes.func.isRequired,
 }

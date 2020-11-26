@@ -1,15 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
+import styled from "styled-components"
 
-export default function Button({ onClick, children }) {
-  return (
-    <button type="button" onClick={onClick}>
-      {children}
-    </button>
-  )
-}
+const Button = styled.button`
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.backgroundText};
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.6rem;
+`
 
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
-}
+export default Button
