@@ -14,7 +14,7 @@ export default function PreviousChoices({
         <ol>
           {previousChoices.map((prevChoice) => {
             return (
-              <li key={prevChoice}>
+              <li key={prevChoice.stepKey}>
                 <button
                   type="button"
                   onClick={() => handleNextStepSelection(prevChoice.stepKey)}
