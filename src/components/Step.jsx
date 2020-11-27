@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
     }
   }
 `
-export default function Step({ step, handleNextStepSelection, theme }) {
+export default function Step({ step, handleNextStepSelection }) {
   return (
     <StyledWrapper>
       <h1>{step.text}</h1>
@@ -28,7 +28,7 @@ export default function Step({ step, handleNextStepSelection, theme }) {
             return (
               <Button
                 onClick={() => handleNextStepSelection(choice)}
-                theme={theme}
+                key={choice}
               >
                 {correspondingStep.buttonTextToStep}
               </Button>
@@ -40,7 +40,6 @@ export default function Step({ step, handleNextStepSelection, theme }) {
 }
 
 Step.propTypes = {
-  step: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired,
+  step: PropTypes.instanceOf(Object).isRequired,
   handleNextStepSelection: PropTypes.func.isRequired,
 }

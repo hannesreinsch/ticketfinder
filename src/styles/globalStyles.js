@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
-    line-height: 1;
+    line-height: 1.5;
     font-size: ${({ theme }) => theme.fontNormal};
   }
 

@@ -5,7 +5,10 @@ import PropTypes from "prop-types"
 const StyledWrapper = styled.div`
   h3 {
     font-size: ${({ theme }) => theme.fontXL};
-    margin-bottom: 50px;
+    font-weight: 600;
+  }
+  p {
+    margin: 10px 0 50px;
   }
   button {
     &:active,
@@ -35,13 +38,14 @@ export default function PreviousChoices({
 }) {
   return (
     <StyledWrapper>
-      <h3>Your previous choices</h3>
+      <h3>Your choices</h3>
+      <p>Here you can go back to previous questions</p>
       {previousChoices.length > 0 && (
         <>
-          {previousChoices.map((prevChoice) => {
-            return (
-              <ol>
-                <li>
+          <ol>
+            {previousChoices.map((prevChoice) => {
+              return (
+                <li key={prevChoice}>
                   <button
                     type="button"
                     onClick={() => handleNextStepSelection(prevChoice.stepKey)}
@@ -49,9 +53,9 @@ export default function PreviousChoices({
                     {prevChoice.question}: {prevChoice.choice}
                   </button>
                 </li>
-              </ol>
-            )
-          })}
+              )
+            })}
+          </ol>
         </>
       )}
     </StyledWrapper>
