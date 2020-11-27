@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
+import { THEME_DARK, THEME_NINEBARC } from "../styles/theme"
 
 const useThemeChange = () => {
-  const [theme, setTheme] = useState("ninebarcTheme")
+  const [theme, setTheme] = useState(THEME_NINEBARC)
 
   const setMode = (mode) => {
     window.localStorage.setItem("theme", mode)
@@ -9,10 +10,10 @@ const useThemeChange = () => {
   }
 
   const themeToggler = () => {
-    if (theme === "ninebarcTheme") {
-      setMode("dark")
+    if (theme === THEME_NINEBARC) {
+      setMode(THEME_DARK)
     } else {
-      setMode("ninebarcTheme")
+      setMode(THEME_NINEBARC)
     }
   }
 

@@ -1,3 +1,6 @@
+export const THEME_NINEBARC = "ninebarcTheme"
+export const THEME_DARK = "darkTheme"
+
 const sharedTheme = {
   fontNormal: "20px",
   fontXL: "25px",
