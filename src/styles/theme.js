@@ -8,6 +8,7 @@ export const ninebarcTheme = {
   ...sharedTheme,
   body: "#fff",
   text: "#000",
+  border: "#000",
   background: "#409469",
   backgroundHover: "#01723a",
   backgroundLight: "#E0EAE3",
@@ -16,8 +17,11 @@ export const ninebarcTheme = {
 
 export const darkTheme = {
   ...sharedTheme,
-  body: "#363537",
-  text: "#FAFAFA",
-  toggleBorder: "#6B8096",
-  background: "#999",
+  body: "#222222",
+  text: "#fff",
+  background: "#409469",
+  backgroundHover: "#01723a",
+  backgroundLight: "#545454",
+  border: "#fff",
+  backgroundText: "#fff",
 }

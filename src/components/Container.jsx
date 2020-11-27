@@ -5,7 +5,7 @@ import PreviousChoices from "./PreviousChoices"
 import { db, Q_NOTICKET } from "../constants/db"
 
 const StyledWrapper = styled.div`
-  border-top: 1px solid black;
+  border-top: 1px solid ${({ theme }) => theme.border};
   border-bottom: none;
   display: flex;
   flex-direction: row;
