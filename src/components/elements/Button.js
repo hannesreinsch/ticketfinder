@@ -13,6 +13,9 @@ const Button = styled.button`
     background: ${({ theme }) => theme.backgroundHover};
     cursor: pointer;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
   color: ${({ theme }) => theme.backgroundText};
   padding: 20px 30px;
   border: none;

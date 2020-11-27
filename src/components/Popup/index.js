@@ -26,7 +26,11 @@ export default function Popup({ handleNameSubmit }) {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Button className="enter" onClick={() => handleNameSubmit(name)}>
+          <Button
+            className="enter"
+            onClick={() => handleNameSubmit(name)}
+            disabled={!name}
+          >
             Enter
           </Button>
         </div>
