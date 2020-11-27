@@ -12,7 +12,8 @@
   ],
   "rules": {
     "semi": 0,
-    "no-unused-vars": "warn",    
+    "no-unused-vars": "warn",
+    "import/prefer-default-export": "warn",    
     "react/jsx-filename-extension": [
       1,
       {
