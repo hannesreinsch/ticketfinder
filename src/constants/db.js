@@ -19,7 +19,7 @@ const T_ONEMONTHTICKET = "OneMonthTicket"
 
 const db = {
   [Q_NOTICKET]: {
-    text: "Are you from Berlin?",
+    text: "Do you want to travel by train like a real Berliner?",
     buttonTextToStep: "Restart",
     choices: [T_NOTICKET, Q_DURATION],
   },
@@ -54,8 +54,8 @@ const db = {
     choices: [T_FOURSHORTTRIPTICKET, T_FOURSINGLETICKET, T_FULLDAYTICKET],
   },
   [T_NOTICKET]: {
-    text: "Wat machste dite hier wenn de eh schwarz fährst?;)",
-    buttonTextToStep: "Ich bin ein Berliner!",
+    text: "Real Berliners don't buy tickets!",
+    buttonTextToStep: "Yes",
     choices: [Q_NOTICKET],
   },
   [T_SHORTTRIPTICKET]: {

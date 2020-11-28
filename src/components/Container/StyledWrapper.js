@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   .col-choice {
     padding: 100px 50px;
     width: 30%;
-    border-right: 1px solid black;
+    border-right: 1px solid ${({ theme }) => theme.border};
     background-color: ${({ theme }) => theme.backgroundLight};
   }
   .col-step {
